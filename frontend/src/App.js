@@ -1,8 +1,21 @@
 import './App.css';
 import axios from 'axios';
 import React from 'react'
+import {Routes, Route, Link} from 'react-router-dom'
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
-class App extends React.Component{
+const App = () => {
+  return (
+    <Routes>
+      <Route path='/signIn' element={<SignIn/>}/>
+      <Route path='/signUp' element={<SignUp/>}/>
+    </Routes>
+  )
+}
+
+export default App
+/*class App extends React.Component{
   state = {details: [],}
 
   componentDidMount(){
@@ -33,4 +46,4 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default App;*/
